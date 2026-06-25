@@ -1,0 +1,254 @@
+{
+  "mappings": {
+    "com/sayuki/utils/darkmode/mixins/FontMixin": {
+      "adjustColor": "Lnet/minecraft/client/gui/Font;m_92719_(I)I"
+    },
+    "com/sayuki/utils/darkmode/mixins/GameRenderMixin": {
+      "getPositionTexColorShader": "Lnet/minecraft/client/renderer/GameRenderer;m_172820_()Lnet/minecraft/client/renderer/ShaderInstance;",
+      "getPositionTexShader": "Lnet/minecraft/client/renderer/GameRenderer;m_172817_()Lnet/minecraft/client/renderer/ShaderInstance;"
+    },
+    "com/sayuki/utils/darkmode/mixins/ShaderInstanceAccessor": {
+      "getUniform": "m_173348_(Ljava/lang/String;)Lcom/mojang/blaze3d/shaders/Uniform;"
+    },
+    "com/sayuki/utils/darkmode/mixins/VertexBufferMixin": {
+      "Lcom/mojang/blaze3d/systems/RenderSystem;setupShaderLights(Lnet/minecraft/client/renderer/ShaderInstance;)V": "Lcom/mojang/blaze3d/systems/RenderSystem;setupShaderLights(Lnet/minecraft/client/renderer/ShaderInstance;)V",
+      "_drawWithShader": "Lcom/mojang/blaze3d/vertex/VertexBuffer;m_166876_(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V"
+    },
+    "com/sayuki/utils/playtime/mixin/WorldSelectionListAccessor": {
+      "summary": "f_101695_:Lnet/minecraft/world/level/storage/LevelSummary;"
+    },
+    "com/sayuki/utils/playtime/mixin/WorldListEntryMixin": {
+      "render": "Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList$WorldListEntry;m_6311_(Lnet/minecraft/client/gui/GuiGraphics;IIIIIIIZF)V"
+    },
+    "com/sayuki/utils/playtime/mixin/OnlineServerEntryAccessor": {
+      "serverData": "f_99857_:Lnet/minecraft/client/multiplayer/ServerData;",
+      "minecraft": "f_99856_:Lnet/minecraft/client/Minecraft;"
+    },
+    "com/sayuki/utils/playtime/mixin/OnlineServerEntryMixin": {
+      "Lnet/minecraft/client/gui/GuiGraphics;drawString(Lnet/minecraft/client/gui/Font;Ljava/lang/String;IIIZ)I": "Lnet/minecraft/client/gui/GuiGraphics;m_280056_(Lnet/minecraft/client/gui/Font;Ljava/lang/String;IIIZ)I",
+      "render": "Lnet/minecraft/client/gui/screens/multiplayer/ServerSelectionList$OnlineServerEntry;m_6311_(Lnet/minecraft/client/gui/GuiGraphics;IIIIIIIZF)V"
+    },
+    "com/sayuki/utils/lan/mixin/ShareToLanScreenMixin": {
+      "init": "Lnet/minecraft/client/gui/screens/ShareToLanScreen;m_7856_()V",
+      "render": "Lnet/minecraft/client/gui/screens/ShareToLanScreen;m_88315_(Lnet/minecraft/client/gui/GuiGraphics;IIF)V",
+      "tick": "Lnet/minecraft/client/gui/screens/ShareToLanScreen;m_86600_()V"
+    },
+    "com/sayuki/utils/lan/mixin/ShareToLanScreenAccessor": {
+      "gameMode": "f_169427_:Lnet/minecraft/world/level/GameType;",
+      "port": "f_256852_:I",
+      "portEdit": "f_256803_:Lnet/minecraft/client/gui/components/EditBox;"
+    },
+    "com/sayuki/utils/lan/mixin/IntegratedServerAccessor": {
+      "lanPinger": "f_120018_:Lnet/minecraft/client/server/LanServerPinger;",
+      "publishedPort": "f_120017_:I",
+      "uuid": "f_120019_:Ljava/util/UUID;"
+    },
+    "com/sayuki/utils/lan/mixin/PlayerListAccessor": {
+      "maxPlayers": "f_11193_:I",
+      "LOGGER": "f_11188_:Lorg/slf4j/Logger;",
+      "server": "f_11195_:Lnet/minecraft/server/MinecraftServer;",
+      "ops": "f_11200_:Lnet/minecraft/server/players/ServerOpList;",
+      "bans": "f_11198_:Lnet/minecraft/server/players/UserBanList;",
+      "ipBans": "f_11199_:Lnet/minecraft/server/players/IpBanList;",
+      "whitelist": "f_11201_:Lnet/minecraft/server/players/UserWhiteList;",
+      "doWhiteList": "f_11205_:Z"
+    },
+    "com/sayuki/utils/lan/mixin/StoredUserListAccessor": {
+      "contains": "Lnet/minecraft/server/players/StoredUserList;m_11396_(Ljava/lang/Object;)Z"
+    },
+    "com/sayuki/utils/lan/mixin/ButtonAccessor": {
+      "onPress": "f_93717_:Lnet/minecraft/client/gui/components/Button$OnPress;"
+    },
+    "com/sayuki/utils/lan/mixin/GridWidgetAccessor": {
+      "children": "f_263670_:Ljava/util/List;"
+    },
+    "com/sayuki/utils/lan/mixin/MinecraftServerMixin": {
+      "stopServer": "Lnet/minecraft/server/MinecraftServer;m_7041_()V"
+    },
+    "com/sayuki/utils/lan/mixin/PlayerListMixin": {
+      "LOGGER": "f_11188_:Lorg/slf4j/Logger;",
+      "server": "f_11195_:Lnet/minecraft/server/MinecraftServer;",
+      "ops": "f_11200_:Lnet/minecraft/server/players/ServerOpList;",
+      "bans": "f_11198_:Lnet/minecraft/server/players/UserBanList;",
+      "ipBans": "f_11199_:Lnet/minecraft/server/players/IpBanList;",
+      "whitelist": "f_11201_:Lnet/minecraft/server/players/UserWhiteList;",
+      "doWhiteList": "f_11205_:Z",
+      "<init>": "Lnet/minecraft/server/players/PlayerList;<init>(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/core/LayeredRegistryAccess;Lnet/minecraft/world/level/storage/PlayerDataStorage;I)V",
+      "canPlayerLogin": "Lnet/minecraft/server/players/PlayerList;m_6418_(Ljava/net/SocketAddress;Lcom/mojang/authlib/GameProfile;)Lnet/minecraft/network/chat/Component;",
+      "op": "Lnet/minecraft/server/players/PlayerList;m_5749_(Lcom/mojang/authlib/GameProfile;)V",
+      "deop": "Lnet/minecraft/server/players/PlayerList;m_5750_(Lcom/mojang/authlib/GameProfile;)V",
+      "isOp": "Lnet/minecraft/server/players/PlayerList;m_11303_(Lcom/mojang/authlib/GameProfile;)Z",
+      "getOpNames": "Lnet/minecraft/server/players/PlayerList;m_11308_()[Ljava/lang/String;",
+      "canBypassPlayerLimit": "Lnet/minecraft/server/players/PlayerList;m_5765_(Lcom/mojang/authlib/GameProfile;)Z",
+      "isUsingWhitelist": "Lnet/minecraft/server/players/PlayerList;m_11311_()Z",
+      "setUsingWhiteList": "Lnet/minecraft/server/players/PlayerList;m_6628_(Z)V",
+      "isWhiteListed": "Lnet/minecraft/server/players/PlayerList;m_5764_(Lcom/mojang/authlib/GameProfile;)Z",
+      "Lnet/minecraft/server/players/ServerOpList;add(Lnet/minecraft/server/players/StoredUserEntry;)V": "Lnet/minecraft/server/players/ServerOpList;m_11381_(Lnet/minecraft/server/players/StoredUserEntry;)V",
+      "Lnet/minecraft/server/players/ServerOpList;remove(Ljava/lang/Object;)V": "Lnet/minecraft/server/players/ServerOpList;m_11386_(Ljava/lang/Object;)V"
+    },
+    "com/sayuki/utils/lan/mixin/LevelPropertiesAccessor": {
+      "settings": "f_78443_:Lnet/minecraft/world/level/LevelSettings;"
+    },
+    "com/sayuki/utils/lan/mixin/LevelPropertiesMixin": {
+      "settings": "f_78443_:Lnet/minecraft/world/level/LevelSettings;"
+    },
+    "com/sayuki/utils/lan/mixin/PublishCommandMixin": {
+      "ERROR_FAILED": "f_138181_:Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;",
+      "register": "Lnet/minecraft/server/commands/PublishCommand;m_138184_(Lcom/mojang/brigadier/CommandDispatcher;)V"
+    },
+    "com/sayuki/utils/lan/mixin/PauseScreenMixin": {
+      "init": "Lnet/minecraft/client/gui/screens/PauseScreen;m_7856_()V"
+    },
+    "com/sayuki/utils/lan/mixin/BanPlayerCommandMixin": {
+      "banPlayers": "Lnet/minecraft/server/commands/BanPlayerCommands;m_136564_(Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;Lnet/minecraft/network/chat/Component;)I"
+    },
+    "com/sayuki/utils/lan/mixin/BanIpCommandMixin": {
+      "banIp": "Lnet/minecraft/server/commands/BanIpCommands;m_136539_(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;Lnet/minecraft/network/chat/Component;)I",
+      "Lnet/minecraft/server/players/PlayerList;getPlayersWithAddress(Ljava/lang/String;)Ljava/util/List;": "Lnet/minecraft/server/players/PlayerList;m_11282_(Ljava/lang/String;)Ljava/util/List;"
+    },
+    "com/sayuki/utils/lan/mixin/WhitelistCommandMixin": {
+      "addPlayers": "Lnet/minecraft/server/commands/WhitelistCommand;m_139210_(Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I"
+    },
+    "com/sayuki/utils/lan/mixin/PlayitConnectionAccessor": {
+      "address": "f_129469_:Ljava/net/SocketAddress;"
+    },
+    "com/sayuki/utils/lan/mixin/PlayitConnectionMixin": {
+      "address": "f_129469_:Ljava/net/SocketAddress;",
+      "channelActive": "Lnet/minecraft/network/Connection;channelActive(Lio/netty/channel/ChannelHandlerContext;)V"
+    },
+    "com/sayuki/utils/lan/mixin/PlayitServerBridgeMixin": {
+      "startTcpServerListener": "Lnet/minecraft/server/network/ServerConnectionListener;m_9711_(Ljava/net/InetAddress;I)V"
+    },
+    "com/sayuki/utils/lan/mixin/PlayitServerListenerAccessor": {
+      "initChannel": "initChannel(Lio/netty/channel/Channel;)V",
+      "net.minecraft.server.network.ServerConnectionListener$1": "net/minecraft/server/network/ServerConnectionListener$1"
+    }
+  },
+  "data": {
+    "searge": {
+      "com/sayuki/utils/darkmode/mixins/FontMixin": {
+        "adjustColor": "Lnet/minecraft/client/gui/Font;m_92719_(I)I"
+      },
+      "com/sayuki/utils/darkmode/mixins/GameRenderMixin": {
+        "getPositionTexColorShader": "Lnet/minecraft/client/renderer/GameRenderer;m_172820_()Lnet/minecraft/client/renderer/ShaderInstance;",
+        "getPositionTexShader": "Lnet/minecraft/client/renderer/GameRenderer;m_172817_()Lnet/minecraft/client/renderer/ShaderInstance;"
+      },
+      "com/sayuki/utils/darkmode/mixins/ShaderInstanceAccessor": {
+        "getUniform": "m_173348_(Ljava/lang/String;)Lcom/mojang/blaze3d/shaders/Uniform;"
+      },
+      "com/sayuki/utils/darkmode/mixins/VertexBufferMixin": {
+        "Lcom/mojang/blaze3d/systems/RenderSystem;setupShaderLights(Lnet/minecraft/client/renderer/ShaderInstance;)V": "Lcom/mojang/blaze3d/systems/RenderSystem;setupShaderLights(Lnet/minecraft/client/renderer/ShaderInstance;)V",
+        "_drawWithShader": "Lcom/mojang/blaze3d/vertex/VertexBuffer;m_166876_(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V"
+      },
+      "com/sayuki/utils/playtime/mixin/WorldSelectionListAccessor": {
+        "summary": "f_101695_:Lnet/minecraft/world/level/storage/LevelSummary;"
+      },
+      "com/sayuki/utils/playtime/mixin/WorldListEntryMixin": {
+        "render": "Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList$WorldListEntry;m_6311_(Lnet/minecraft/client/gui/GuiGraphics;IIIIIIIZF)V"
+      },
+      "com/sayuki/utils/playtime/mixin/OnlineServerEntryAccessor": {
+        "serverData": "f_99857_:Lnet/minecraft/client/multiplayer/ServerData;",
+        "minecraft": "f_99856_:Lnet/minecraft/client/Minecraft;"
+      },
+      "com/sayuki/utils/playtime/mixin/OnlineServerEntryMixin": {
+        "Lnet/minecraft/client/gui/GuiGraphics;drawString(Lnet/minecraft/client/gui/Font;Ljava/lang/String;IIIZ)I": "Lnet/minecraft/client/gui/GuiGraphics;m_280056_(Lnet/minecraft/client/gui/Font;Ljava/lang/String;IIIZ)I",
+        "render": "Lnet/minecraft/client/gui/screens/multiplayer/ServerSelectionList$OnlineServerEntry;m_6311_(Lnet/minecraft/client/gui/GuiGraphics;IIIIIIIZF)V"
+      },
+      "com/sayuki/utils/lan/mixin/ShareToLanScreenMixin": {
+        "init": "Lnet/minecraft/client/gui/screens/ShareToLanScreen;m_7856_()V",
+        "render": "Lnet/minecraft/client/gui/screens/ShareToLanScreen;m_88315_(Lnet/minecraft/client/gui/GuiGraphics;IIF)V",
+        "tick": "Lnet/minecraft/client/gui/screens/ShareToLanScreen;m_86600_()V"
+      },
+      "com/sayuki/utils/lan/mixin/ShareToLanScreenAccessor": {
+        "gameMode": "f_169427_:Lnet/minecraft/world/level/GameType;",
+        "port": "f_256852_:I",
+        "portEdit": "f_256803_:Lnet/minecraft/client/gui/components/EditBox;"
+      },
+      "com/sayuki/utils/lan/mixin/IntegratedServerAccessor": {
+        "lanPinger": "f_120018_:Lnet/minecraft/client/server/LanServerPinger;",
+        "publishedPort": "f_120017_:I",
+        "uuid": "f_120019_:Ljava/util/UUID;"
+      },
+      "com/sayuki/utils/lan/mixin/PlayerListAccessor": {
+        "maxPlayers": "f_11193_:I",
+        "LOGGER": "f_11188_:Lorg/slf4j/Logger;",
+        "server": "f_11195_:Lnet/minecraft/server/MinecraftServer;",
+        "ops": "f_11200_:Lnet/minecraft/server/players/ServerOpList;",
+        "bans": "f_11198_:Lnet/minecraft/server/players/UserBanList;",
+        "ipBans": "f_11199_:Lnet/minecraft/server/players/IpBanList;",
+        "whitelist": "f_11201_:Lnet/minecraft/server/players/UserWhiteList;",
+        "doWhiteList": "f_11205_:Z"
+      },
+      "com/sayuki/utils/lan/mixin/StoredUserListAccessor": {
+        "contains": "Lnet/minecraft/server/players/StoredUserList;m_11396_(Ljava/lang/Object;)Z"
+      },
+      "com/sayuki/utils/lan/mixin/ButtonAccessor": {
+        "onPress": "f_93717_:Lnet/minecraft/client/gui/components/Button$OnPress;"
+      },
+      "com/sayuki/utils/lan/mixin/GridWidgetAccessor": {
+        "children": "f_263670_:Ljava/util/List;"
+      },
+      "com/sayuki/utils/lan/mixin/MinecraftServerMixin": {
+        "stopServer": "Lnet/minecraft/server/MinecraftServer;m_7041_()V"
+      },
+      "com/sayuki/utils/lan/mixin/PlayerListMixin": {
+        "LOGGER": "f_11188_:Lorg/slf4j/Logger;",
+        "server": "f_11195_:Lnet/minecraft/server/MinecraftServer;",
+        "ops": "f_11200_:Lnet/minecraft/server/players/ServerOpList;",
+        "bans": "f_11198_:Lnet/minecraft/server/players/UserBanList;",
+        "ipBans": "f_11199_:Lnet/minecraft/server/players/IpBanList;",
+        "whitelist": "f_11201_:Lnet/minecraft/server/players/UserWhiteList;",
+        "doWhiteList": "f_11205_:Z",
+        "<init>": "Lnet/minecraft/server/players/PlayerList;<init>(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/core/LayeredRegistryAccess;Lnet/minecraft/world/level/storage/PlayerDataStorage;I)V",
+        "canPlayerLogin": "Lnet/minecraft/server/players/PlayerList;m_6418_(Ljava/net/SocketAddress;Lcom/mojang/authlib/GameProfile;)Lnet/minecraft/network/chat/Component;",
+        "op": "Lnet/minecraft/server/players/PlayerList;m_5749_(Lcom/mojang/authlib/GameProfile;)V",
+        "deop": "Lnet/minecraft/server/players/PlayerList;m_5750_(Lcom/mojang/authlib/GameProfile;)V",
+        "isOp": "Lnet/minecraft/server/players/PlayerList;m_11303_(Lcom/mojang/authlib/GameProfile;)Z",
+        "getOpNames": "Lnet/minecraft/server/players/PlayerList;m_11308_()[Ljava/lang/String;",
+        "canBypassPlayerLimit": "Lnet/minecraft/server/players/PlayerList;m_5765_(Lcom/mojang/authlib/GameProfile;)Z",
+        "isUsingWhitelist": "Lnet/minecraft/server/players/PlayerList;m_11311_()Z",
+        "setUsingWhiteList": "Lnet/minecraft/server/players/PlayerList;m_6628_(Z)V",
+        "isWhiteListed": "Lnet/minecraft/server/players/PlayerList;m_5764_(Lcom/mojang/authlib/GameProfile;)Z",
+        "Lnet/minecraft/server/players/ServerOpList;add(Lnet/minecraft/server/players/StoredUserEntry;)V": "Lnet/minecraft/server/players/ServerOpList;m_11381_(Lnet/minecraft/server/players/StoredUserEntry;)V",
+        "Lnet/minecraft/server/players/ServerOpList;remove(Ljava/lang/Object;)V": "Lnet/minecraft/server/players/ServerOpList;m_11386_(Ljava/lang/Object;)V"
+      },
+      "com/sayuki/utils/lan/mixin/LevelPropertiesAccessor": {
+        "settings": "f_78443_:Lnet/minecraft/world/level/LevelSettings;"
+      },
+      "com/sayuki/utils/lan/mixin/LevelPropertiesMixin": {
+        "settings": "f_78443_:Lnet/minecraft/world/level/LevelSettings;"
+      },
+      "com/sayuki/utils/lan/mixin/PublishCommandMixin": {
+        "ERROR_FAILED": "f_138181_:Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;",
+        "register": "Lnet/minecraft/server/commands/PublishCommand;m_138184_(Lcom/mojang/brigadier/CommandDispatcher;)V"
+      },
+      "com/sayuki/utils/lan/mixin/PauseScreenMixin": {
+        "init": "Lnet/minecraft/client/gui/screens/PauseScreen;m_7856_()V"
+      },
+      "com/sayuki/utils/lan/mixin/BanPlayerCommandMixin": {
+        "banPlayers": "Lnet/minecraft/server/commands/BanPlayerCommands;m_136564_(Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;Lnet/minecraft/network/chat/Component;)I"
+      },
+      "com/sayuki/utils/lan/mixin/BanIpCommandMixin": {
+        "banIp": "Lnet/minecraft/server/commands/BanIpCommands;m_136539_(Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;Lnet/minecraft/network/chat/Component;)I",
+        "Lnet/minecraft/server/players/PlayerList;getPlayersWithAddress(Ljava/lang/String;)Ljava/util/List;": "Lnet/minecraft/server/players/PlayerList;m_11282_(Ljava/lang/String;)Ljava/util/List;"
+      },
+      "com/sayuki/utils/lan/mixin/WhitelistCommandMixin": {
+        "addPlayers": "Lnet/minecraft/server/commands/WhitelistCommand;m_139210_(Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I"
+      },
+      "com/sayuki/utils/lan/mixin/PlayitConnectionAccessor": {
+        "address": "f_129469_:Ljava/net/SocketAddress;"
+      },
+      "com/sayuki/utils/lan/mixin/PlayitConnectionMixin": {
+        "channelActive": "Lnet/minecraft/network/Connection;channelActive(Lio/netty/channel/ChannelHandlerContext;)V"
+      },
+      "com/sayuki/utils/lan/mixin/PlayitServerBridgeMixin": {
+        "startTcpServerListener": "Lnet/minecraft/server/network/ServerConnectionListener;m_9711_(Ljava/net/InetAddress;I)V"
+      },
+      "com/sayuki/utils/lan/mixin/PlayitServerListenerAccessor": {
+        "initChannel": "initChannel(Lio/netty/channel/Channel;)V",
+        "net.minecraft.server.network.ServerConnectionListener$1": "net/minecraft/server/network/ServerConnectionListener$1"
+      }
+    }
+  }
+}
+

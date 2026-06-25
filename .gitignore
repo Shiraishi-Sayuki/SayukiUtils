@@ -1,0 +1,33 @@
+# Gradle
+build/
+*/build/
+.gradle/
+*/.gradle/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+*.class
+*.log
+.vscode/
+.settings/
+.project
+.classpath
+bin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Run directories
+run/
+*/run/
+
+# Generated resources
+*/src/generated/
+
+# Eclipse
+eclipse-bin/
+

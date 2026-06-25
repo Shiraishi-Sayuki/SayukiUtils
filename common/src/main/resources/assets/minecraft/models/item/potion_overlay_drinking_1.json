@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sayukiutils:item/eatanim/potion_overlay_drinking_1",
+    "layer1": "sayukiutils:item/eatanim/bottle_without_cork"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.sayuki.utils.tooltip.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "sayukiutils.refmap.json",
+  "client": [
+    "OrderedTextToolTipAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
