@@ -1,0 +1,29 @@
+{
+    "parent": "item/generated",
+    "overrides": [
+        {
+            "model": "supplementaries:item/lumisene_bottle_a",
+            "predicate": {
+                "eatinganimation:drink": 0.35,
+                "eatinganimation:drinking": 1
+            }
+        },
+        {
+            "model": "supplementaries:item/lumisene_bottle_b",
+            "predicate": {
+                "eatinganimation:drink": 0.7,
+                "eatinganimation:drinking": 1
+            }
+        },
+        {
+            "model": "supplementaries:item/lumisene_bottle_c",
+            "predicate": {
+                "eatinganimation:drink": 0.9,
+                "eatinganimation:drinking": 1
+            }
+        }
+    ],
+    "textures": {
+        "layer0": "supplementaries:item/lumisene_bottle"
+    }
+}

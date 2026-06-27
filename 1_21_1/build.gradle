@@ -1,0 +1,10 @@
+subprojects {
+}
+
+tasks.register('build') {
+    dependsOn subprojects.collect { "${it.path}:build" }
+}
+
+tasks.register('clean') {
+    dependsOn subprojects.collect { "${it.path}:clean" }
+}

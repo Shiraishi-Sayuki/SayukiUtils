@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": ["${mod_author}"],
+  "license": "${license}",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.sayuki.utils.fabric.SayukiUtilsFabric"],
+    "client": ["com.sayuki.utils.fabric.SayukiUtilsClientFabric"],
+    "modmenu": ["com.sayuki.utils.fabric.modmenu.ModMenuIntegration"]
+  },
+  "accessWidener": "sayukiutils.accesswidener",
+  "mixins": [
+    "sayukiutils.darkmode.mixins.json",
+    "sayukiutils.tooltip.mixins.json",
+    "sayukiutils.playtime.mixins.json",
+    "sayukiutils.fabric.mixins.json",
+    "sayukiutils.lan.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=${minecraft_version}",
+    "cloth-config": ">=11.1.118"
+  }
+}

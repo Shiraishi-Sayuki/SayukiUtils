@@ -2,6 +2,27 @@
 
 A utility mod for Minecraft made for fun ʕ⁠ ⁠ꈍ⁠ᴥ⁠ꈍ⁠ʔ
 
+## Requirements
+
+- **Java 21**
+
+## Build
+
+```sh
+# 1.20.1
+./gradlew :1_20_1:build
+
+# 1.21.1
+export JAVA_HOME=/path/to/jdk-21
+./gradlew :1_21_1:build
+
+# Individual loaders
+./gradlew :1_21_1:fabric:build
+./gradlew :1_21_1:neoforge:build
+```
+
+Outputs go to `*/build/libs/`.
+
 ## Mod Requirements:
 
 **Fabric:**

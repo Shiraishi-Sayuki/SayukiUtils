@@ -1,0 +1,16 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.sayuki.utils.darkmode.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "sayukiutils.refmap.json",
+  "client": [
+    "FontMixin",
+    "GameRenderMixin",
+    "ShaderInstanceAccessor",
+    "VertexBufferMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

@@ -1,8 +1,6 @@
 # Gradle
 build/
-*/build/
 .gradle/
-*/.gradle/
 
 # IDE
 .idea/
@@ -23,10 +21,9 @@ Thumbs.db
 
 # Run directories
 run/
-*/run/
 
 # Generated resources
-*/src/generated/
+**/src/generated/
 
 # Eclipse
 eclipse-bin/

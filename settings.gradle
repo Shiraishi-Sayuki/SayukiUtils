@@ -21,6 +21,9 @@ plugins {
 }
 
 rootProject.name = 'SayukiUtils'
-include("common")
-include("fabric")
-include("forge")
+include("1_20_1:common")
+include("1_20_1:fabric")
+include("1_20_1:forge")
+include("1_21_1:common")
+include("1_21_1:fabric")
+    include("1_21_1:neoforge")

@@ -2,6 +2,26 @@
 
 MinecraftユーティリティMod、たんなるひまつぶし　ʕ⁠ ⁠ꈍ⁠ᴥ⁠ꈍ⁠ʔ
 
+## 必要な環境
+
+- **Java 21**
+
+## ビルド
+
+```sh
+# 1.20.1
+./gradlew :1_20_1:build
+
+# 1.21.1
+./gradlew :1_21_1:build
+
+# 個別ローダー
+./gradlew :1_21_1:fabric:build
+./gradlew :1_21_1:neoforge:build
+```
+
+生成物は各 `*/build/libs/` に出力されます。
+
 ## 必要なMod:
 
 **Fabric:**

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sayukiutils:item/eatanim/melon_slice_eating_0"
+  }
+}

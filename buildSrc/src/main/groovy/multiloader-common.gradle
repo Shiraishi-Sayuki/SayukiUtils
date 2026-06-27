@@ -99,11 +99,19 @@ processResources {
             'mod_id'                       : mod_id,
             'license'                      : license,
             'description'                  : project.description,
-            "forge_version": forge_version,
-            "forge_loader_version_range": forge_loader_version_range,
             'credits'                      : credits,
             'java_version'                 : java_version
     ]
+
+    if (project.hasProperty('forge_version')) {
+        expandProps['forge_version'] = forge_version
+        expandProps['forge_loader_version_range'] = forge_loader_version_range
+    }
+
+    if (project.hasProperty('neoforge_version')) {
+        expandProps['neoforge_version'] = neoforge_version
+        expandProps['neoforge_loader_version_range'] = neoforge_loader_version_range
+    }
 
     var jsonExpandProps = expandProps.collectEntries {
         key, value -> [(key): value instanceof String ? value.replace("\n", "\\\\n") : value]
@@ -113,7 +121,7 @@ processResources {
         expand expandProps
     }
 
-    filesMatching(['pack.mcmeta', 'fabric.mod.json', '*.mixins.json']) {
+    filesMatching(['META-INF/neoforge.mods.toml', 'pack.mcmeta', 'fabric.mod.json', '*.mixins.json']) {
         expand jsonExpandProps
     }
 

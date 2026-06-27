@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.sayuki.utils.fabric.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ScreenAccessor",
+    "ScreenInitMixin"
+  ],
+  "client": [
+    "FabricTooltipMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

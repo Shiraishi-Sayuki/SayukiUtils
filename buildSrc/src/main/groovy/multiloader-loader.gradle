@@ -11,14 +11,16 @@ configurations {
     }
 }
 
+def commonProjectPath = ":${project.parent.name}:common"
+
 dependencies {
-    compileOnly(project(':common')) {
+    compileOnly(project(commonProjectPath)) {
         capabilities {
             requireCapability "$group:$mod_id"
         }
     }
-    commonJava project(path: ':common', configuration: 'commonJava')
-    commonResources project(path: ':common', configuration: 'commonResources')
+    commonJava project(path: commonProjectPath, configuration: 'commonJava')
+    commonResources project(path: commonProjectPath, configuration: 'commonResources')
 }
 
 tasks.named('compileJava', JavaCompile) {
